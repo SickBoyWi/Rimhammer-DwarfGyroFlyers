@@ -1,0 +1,6 @@
+D:\BackUp\Modding\RimWorld\Repositories\Rimhammer-DwarfGyroFlyers\1.6\Assemblies\RimahmmerGyros.dll
+D:\BackUp\Modding\RimWorld\Repositories\Rimhammer-DwarfGyroFlyers\1.6\Assemblies\RimahmmerGyros.pdb
+D:\BackUp\Modding\RimWorld\Repositories\Rimhammer-DwarfGyroFlyers\Source\RimhammerGyros\obj\Debug\RimhammerGyros.csproj.AssemblyReference.cache
+D:\BackUp\Modding\RimWorld\Repositories\Rimhammer-DwarfGyroFlyers\Source\RimhammerGyros\obj\Debug\RimhammerGyros.csproj.CoreCompileInputs.cache
+D:\BackUp\Modding\RimWorld\Repositories\Rimhammer-DwarfGyroFlyers\Source\RimhammerGyros\obj\Debug\RimahmmerGyros.dll
+D:\BackUp\Modding\RimWorld\Repositories\Rimhammer-DwarfGyroFlyers\Source\RimhammerGyros\obj\Debug\RimahmmerGyros.pdb

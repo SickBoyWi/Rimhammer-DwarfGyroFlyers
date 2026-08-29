@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Defs>
+
+	<SoundDef>
+		<defName>RH_TET_Shot_GyroSteamCannonSound</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Gyro_steamcannon</clipPath>
+					</li>
+				</grains>
+				<volumeRange>40~40</volumeRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+		<defName>RH_TET_Shot_GyroFlameCannonSound</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Gyro_Flamegun</clipPath>
+					</li>
+				</grains>
+				<volumeRange>40~40</volumeRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
+	
+	<SoundDef>
+		<defName>RH_TET_Shot_GyroReloadSound</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Gyro_reload</clipPath>
+					</li>
+				</grains>
+			</li>
+		</subSounds>
+	</SoundDef>
+  
+	<SoundDef>
+		<defName>RH_TET_Shot_GyroEntrySound</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>MetalClank</clipPath>
+					</li>
+				</grains>
+				<volumeRange>40~40</volumeRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+  
+	<SoundDef>
+		<defName>RH_TET_Shot_GyroStartSound</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Gyro_Startup</clipPath>
+					</li>
+				</grains>
+				<volumeRange>40~40</volumeRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
+</Defs>

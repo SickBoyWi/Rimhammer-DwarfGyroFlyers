@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingCategoryDef>
+		<defName>RH_TET_VehicleParts</defName>
+		<label>Rimhammer vehicle parts</label>
+		<parent>Manufactured</parent>
+		<iconPath>UI/Icons/VehicleParts</iconPath>
+		<resourceReadoutRoot>true</resourceReadoutRoot>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>RH_TET_VehicleParts_Dwarfs</defName>
+		<label>Dawi</label>
+		<parent>RH_TET_VehicleParts</parent>
+		<resourceReadoutRoot>true</resourceReadoutRoot>
+	</ThingCategoryDef>
+  
+	<ThingDef Name="RH_TET_VehiclePartBase" Abstract="True">
+		<thingClass>ThingWithComps</thingClass>
+		<category>Item</category>
+		<drawerType>MapMeshOnly</drawerType>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<stackLimit>10</stackLimit>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		<alwaysHaulable>true</alwaysHaulable>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<rotatable>false</rotatable>
+		<pathCost>14</pathCost>
+		<allowedArchonexusCount>-1</allowedArchonexusCount>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<statBases>
+			<MaxHitPoints>110</MaxHitPoints>
+			<Flammability>0.4</Flammability>
+			<DeteriorationRate>1.0</DeteriorationRate>
+			<Beauty>-4</Beauty>
+		</statBases>
+		<thingCategories>
+			<li>RH_TET_VehicleParts_Dwarfs</li>
+		</thingCategories>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<effectWorking>Cook</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<workSkill>Crafting</workSkill>
+			<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+			<recipeUsers>
+				<li>RH_TET_Gyro_WorkBench</li>
+			</recipeUsers>
+			<researchPrerequisites>
+				<li>Smithing</li>
+			</researchPrerequisites>
+			<skillRequirements>
+				<Crafting>8</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_VehiclePartBase">
+		<defName>RH_TET_Gyro_ArmorPlate</defName>
+		<label>armor plate</label>
+		<description>Armor plates used in the creation of Rimhammer vehicles. Valaya (and armor) protects.</description>
+		<graphicData>
+			<texPath>Things/Items/Resources/Gyro_Armorparts</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>250</MarketValue>
+			<Mass>5</Mass>
+			<WorkToMake>1500</WorkToMake>
+		</statBases>
+		<costList>
+			<Steel>30</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_VehiclePartBase">
+		<defName>RH_TET_Gyro_Boiler</defName>
+		<label>boiler</label>
+		<description>A boiler used in the creation of Rimhammer vehicles. One of the main components in creating a steam driven vehicle.</description>
+		<graphicData>
+			<texPath>Things/Items/Resources/Gyro_Boiler</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>750</MarketValue>
+			<Mass>10</Mass>
+			<WorkToMake>3000</WorkToMake>
+		</statBases>
+		<costList>
+			<Steel>35</Steel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+			<Gold>1</Gold>
+		</costList>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_VehiclePartBase">
+		<defName>Gyro_Piston</defName>
+		<label>piston</label>
+		<description>A piston used in the creation of Rimhammer vehicles. Once you have steam, you need a way to leverage it; that's what pistons do.</description>
+		<graphicData>
+			<texPath>Things/Items/Resources/Gyro_Piston</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>350</MarketValue>
+			<Mass>6</Mass>
+			<WorkToMake>3000</WorkToMake>
+		</statBases>
+		<costList>
+			<Steel>35</Steel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+			<Silver>5</Silver>
+		</costList>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_VehiclePartBase">
+		<defName>Gyro_SteamChamber</defName>
+		<label>steam chamber</label>
+		<description>A steam chamber used in the creation of Rimhammer vehicles. Once you have steam, you need a way to make it work for you; pushing it into steam chambers to be forced through a machine facilitates that.</description>
+		<graphicData>
+			<texPath>Things/Items/Resources/Gyro_Steamchamber</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>350</MarketValue>
+			<Mass>8</Mass>
+			<WorkToMake>5000</WorkToMake>
+		</statBases>
+		<costList>
+			<Steel>50</Steel>
+			<ComponentIndustrial>6</ComponentIndustrial>
+			<Silver>5</Silver>
+			<WoodLog>50</WoodLog>
+		</costList>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_VehiclePartBase">
+		<defName>Gyro_SteamPipes</defName>
+		<label>steam pipes</label>
+		<description>Steam pipes used in the creation of Rimhammer vehicles. Once you have steam, you need a way to get it where you need it.</description>
+		<graphicData>
+			<texPath>Things/Items/Resources/Gyro_Steampipes</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>150</MarketValue>
+			<Mass>5</Mass>
+			<WorkToMake>1000</WorkToMake>
+		</statBases>
+		<costList>
+			<Steel>35</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_VehiclePartBase">
+		<defName>Gyro_Blade</defName>
+		<label>blade</label>
+		<description>A blade used in the creation of Rimhammer vehicles. Required for flight and locomotion.</description>
+		<graphicData>
+			<texPath>Things/Items/Resources/Gyro_Propellers</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>200</MarketValue>
+			<Mass>4</Mass>
+			<WorkToMake>500</WorkToMake>
+		</statBases>
+		<costList>
+			<Steel>10</Steel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+			<WoodLog>25</WoodLog>
+		</costList>
+	</ThingDef>
+
+</Defs>
