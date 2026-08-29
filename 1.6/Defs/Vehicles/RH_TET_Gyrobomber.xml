@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable" Name="RH_TET_SteamTank_AlterKameradBlueprint">
+	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable" Name="RH_TET_Gyrocoptor_Bomber_Blueprint">
 		<defName>RH_TET_SteamTank_AlterKameradBlueprint</defName>
 		<label>Empire Alter Kamerad Steam Tank</label>
 		<description>A heavily armored combat vehicle.</description>

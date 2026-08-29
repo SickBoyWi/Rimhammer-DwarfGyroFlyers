@@ -4,15 +4,14 @@
 	<Vehicles.VehicleBuildDef Name="RH_TET_Gyro_BuildDefBase" ParentName="VehicleBaseBuildable" Abstract="True">
 
 		<graphicData>
-			<texPath>Vehicles/Land/Tank/Tank</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(4,7)</drawSize>
+			<drawSize>(3,5)</drawSize>
 		</graphicData>
 		
 		<statBases>
-			<MaxHitPoints>5000</MaxHitPoints>
+			<MaxHitPoints>2000</MaxHitPoints>
 			<WorkToBuild>125000</WorkToBuild>
-			<Flammability>0.05</Flammability>
+			<Flammability>0.25</Flammability>
 		</statBases>
 		
 		<size>(3,5)</size>
@@ -26,7 +25,7 @@
 		
 		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
 		
-		<thingToSpawn>Tank</thingToSpawn>
+		<!-- TODO DELETE? <thingToSpawn>Tank</thingToSpawn>-->
 	</Vehicles.VehicleBuildDef>
 
 

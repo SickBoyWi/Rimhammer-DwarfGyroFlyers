@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-	<Vehicles.VehicleDef Name="RH_TET_SteamTank_Base" ParentName="BaseVehiclePawn" Abstract="True">
+	<Vehicles.VehicleDef Name="RH_TET_Gyrocoptor_Base" ParentName="BaseVehiclePawn" Abstract="True">
 		<properties>
-			<worldSpeedMultiplier>1</worldSpeedMultiplier>
+			<worldSpeedMultiplier>3</worldSpeedMultiplier>
 		</properties>
 		
 		<soundOneShotsOnEvent Inherit="False">
