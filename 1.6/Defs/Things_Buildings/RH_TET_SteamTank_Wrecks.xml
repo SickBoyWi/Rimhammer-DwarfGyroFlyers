@@ -26,7 +26,7 @@
 	<ThingDef ParentName="RH_TET_GyroWreck_Base">
 		<defName>RH_TET_Gyro_WreckA</defName>
 		<killedLeavings>
-			<RH_TET_Gyro_ArmorPlate>1</RH_TET_Gyro_ArmorPlate>
+			<Gyro_ArmorPlate>1</Gyro_ArmorPlate>
 			<Gyro_Piston>1</Gyro_Piston>
 			<Gyro_SteamPipes>1</Gyro_SteamPipes>
 			<ChunkSlagSteel>6</ChunkSlagSteel>
@@ -36,7 +36,7 @@
 	<ThingDef ParentName="RH_TET_GyroWreck_Base">
 		<defName>RH_TET_Gyro_WreckB</defName>
 		<killedLeavings>
-			<RH_TET_Gyro_ArmorPlate>2</RH_TET_Gyro_ArmorPlate>
+			<Gyro_ArmorPlate>2</Gyro_ArmorPlate>
 			<Gyro_SteamPipes>1</Gyro_SteamPipes>
 			<Gyro_Blade>2</Gyro_Blade>
 			<ChunkSlagSteel>6</ChunkSlagSteel>
@@ -46,7 +46,7 @@
 	<ThingDef ParentName="RH_TET_GyroWreck_Base">
 		<defName>RH_TET_Gyro_WreckC</defName>
 		<killedLeavings>
-			<RH_TET_Gyro_ArmorPlate>1</RH_TET_Gyro_ArmorPlate>
+			<Gyro_ArmorPlate>1</Gyro_ArmorPlate>
 			<Gyro_SteamPipes>1</Gyro_SteamPipes>
 			<Gyro_SteamChamber>1</Gyro_SteamChamber>
 			<ChunkSlagSteel>6</ChunkSlagSteel>
@@ -56,9 +56,9 @@
 	<ThingDef ParentName="RH_TET_GyroWreck_Base">
 		<defName>RH_TET_Gyro_WreckD</defName>
 		<killedLeavings>
-			<RH_TET_Gyro_ArmorPlate>1</RH_TET_Gyro_ArmorPlate>
+			<Gyro_ArmorPlate>1</Gyro_ArmorPlate>
 			<Gyro_SteamPipes>1</Gyro_SteamPipes>
-			<RH_TET_Gyro_Boiler>1</RH_TET_Gyro_Boiler>
+			<Gyro_Boiler>1</Gyro_Boiler>
 			<ChunkSlagSteel>6</ChunkSlagSteel>
 		</killedLeavings>
 	</ThingDef>

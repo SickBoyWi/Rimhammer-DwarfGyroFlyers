@@ -1,47 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-	<Vehicles.VehicleDef Name="RH_TET_Gyrocoptor_Base" ParentName="BaseVehiclePawn" Abstract="True">
-		<properties>
-			<worldSpeedMultiplier>3</worldSpeedMultiplier>
-		</properties>
-		
-		<soundOneShotsOnEvent Inherit="False">
-			<li>
-				<key>PawnEntered</key>
-				<value>RH_TET_Shot_SteamTankEntrySound</value>
-			</li>
-			<li>
-				<key>PawnExited</key>
-				<value>RH_TET_Shot_SteamTankEntrySound</value>
-			</li>
-			<li>
-				<key>IgnitionOn</key>
-				<value>RH_TET_Shot_SteamTankStartSound</value>
-			</li>
-			<li>
-				<key>IgnitionOff</key>
-				<value>RH_TET_Shot_SteamTankStartSound</value>
-			</li>
-		</soundOneShotsOnEvent>
-	</Vehicles.VehicleDef>
-
-	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable" Name="RH_TET_SteamTank_ConquerorBlueprint">
-		<defName>RH_TET_SteamTank_ConquerorBlueprint</defName>
-		<label>Empire Conqueror Steam Tank</label>
-		<description>A heavily armored combat vehicle.</description>
+	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
+		<defName>RH_TET_Gyro_GyrocoptorBlueprint</defName>
+		<label>Dawi Gyrocoptor</label>
+		<description>A dwarfen flying machine with light armor, and a steam cannon.</description>
 
 		<graphicData>
-			<texPath>Things/Vehicles/t1/Conqueror/Conqeuror_Tank_north</texPath>
+			<texPath>Things/Vehicles/Gyrocoptor/RH_TET_Gyrobomber_north</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
 			<drawSize>(4,6)</drawSize>
 		</graphicData>
 		
 		<statBases>
-			<MaxHitPoints>1000</MaxHitPoints>
-			<WorkToBuild>12500</WorkToBuild>
-			<Flammability>0.05</Flammability>
+			<MaxHitPoints>500</MaxHitPoints>
+			<WorkToBuild>9500</WorkToBuild>
+			<Flammability>0.75</Flammability>
 		</statBases>
 		
 		<size>(3,5)</size>
@@ -51,357 +26,413 @@
 		</researchPrerequisites>
 		
 		<costList>
-			<Steel>250</Steel>
+			<WoodLog>100</WoodLog>
+			<Steel>150</Steel>
 			<ComponentIndustrial>8</ComponentIndustrial>
-			<Steam_Tank_Wheel>4</Steam_Tank_Wheel>
-			<Steam_Tank_SteamPipes>2</Steam_Tank_SteamPipes>
-			<Steam_Tank_SteamChamber>1</Steam_Tank_SteamChamber>
-			<Steam_Tank_Piston>2</Steam_Tank_Piston>
-			<RH_TET_ST_Boiler>1</RH_TET_ST_Boiler>
-			<RH_TET_ST_ArmorPlate>6</RH_TET_ST_ArmorPlate>
+			<Gyro_Boiler>1</Gyro_Boiler>
+			<Gyro_Piston>2</Gyro_Piston>
+			<Gyro_SteamChamber>1</Gyro_SteamChamber>
+			<Gyro_SteamPipes>4</Gyro_SteamPipes>
+			<Gyro_Blade>3</Gyro_Blade>
+			<Gyro_ArmorPlate>2</Gyro_ArmorPlate>
 		</costList>
 		
 		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
 		
-		<thingToSpawn>RH_TET_SteamTank_Conqueror</thingToSpawn>
+		<thingToSpawn>RH_TET_Gyro_Gyrocoptor</thingToSpawn>
 		
-		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>
-
-	<Vehicles.VehicleDef ParentName="RH_TET_SteamTank_Base">
-		<defName>RH_TET_SteamTank_Conqueror</defName>
-		<label>Conqueror Steam Tank</label>
-		<description>A Steam Tank is a monstrous, smoke-belching, steam-driven Imperial war machine that rumbles towards the enemy and fires deadly cannonballs from its steam-powered cannons to crush all those that stand against the Empire.\n\nThe tried and true  Steamtank variant, this is the classic version with no changes since its creation 500 years ago. This is the lowest tier steam tank available.</description>
+	
+	<Vehicles.VehicleDef ParentName="BaseVehiclePawn">
+		<defName>RH_TET_Gyro_Gyrocoptor</defName>
+		<label>Dawi Gyrocoptor</label>
+		<description>A dwarfen flying machine with light armor, and a steam cannon.</description>
 		
 		<graphicData>
-			<texPath>Things/Vehicles/t1/Conqueror/Conqeuror_Tank</texPath>
+			<texPath>Things/Vehicles/Gyrocoptor/RH_TET_Gyrocopter</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
-			<shaderType>CutoutComplex</shaderType>
 			<drawSize>(4, 6)</drawSize>
-			<color>(138, 138, 138)</color>
-			<colorTwo>(225, 225, 225)</colorTwo>
-			<colorThree>(50, 50, 50)</colorThree>
+			<shaderType>CutoutComplexPattern</shaderType>
+			<!-- TODO <color>(206, 206, 206)</color> -->
 		</graphicData>
 		
 		<fillPercent>1</fillPercent>
 		
-		<buildDef>RH_TET_SteamTank_ConquerorBlueprint</buildDef>
-		
+		<nameable>true</nameable>
+		<buildDef>RH_TET_Gyro_Gyrocoptor</buildDef>
+
 		<size>(3, 5)</size>
 		
-		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
+		<!--<canCaravan LockSetting = "True">false</canCaravan>-->
+		<canCaravan>true</canCaravan>
 		<vehicleCategory>Combat</vehicleCategory>
 		<techLevel>Medieval</techLevel>
-		<vehicleType>Land</vehicleType>
+		<vehicleType>Air</vehicleType>
 		
 		<statBases>
-			<ArmorRating_Blunt>0.45</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.85</ArmorRating_Sharp>
-			<ArmorRating_Heat>0.80</ArmorRating_Heat>
+			<ArmorRating_Blunt>0.36</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.40</ArmorRating_Sharp>
+			<ArmorRating_Heat>1.0</ArmorRating_Heat>
+			<MarketValue>6500</MarketValue>
 			<Flammability>0.5</Flammability>
-			<MarketValue>3500</MarketValue>
 		</statBases>
 		
 		<vehicleStats>
-			<Mass>500</Mass>
-			<MoveSpeed>5.0</MoveSpeed>
-			<CargoCapacity>250</CargoCapacity>
-			<RepairRate>0.5</RepairRate>
+			<Mass>680</Mass>
+			<MoveSpeed LockSetting = "True">0</MoveSpeed>
+			<CargoCapacity>150</CargoCapacity>
+			<RepairRate>1</RepairRate>
+			<FlightSpeed>9.59</FlightSpeed>
 		</vehicleStats>
 		
 		<soundSustainersOnEvent>
 			<li>
-				<key>IgnitionOn</key>
-				<value>RH_TET_SteamTankEngineSound</value>
+				<start>AerialVehicleLaunch</start>
+				<stop>AerialVehicleLeftMap</stop>
+				<value>VVE_VehicleRotorHeavyHelicopter</value>
 			</li>
 			<li>
-				<key>IgnitionOff</key>
-				<value>RH_TET_SteamTankEngineSound</value>
+				<start>AerialVehicleLanding</start>
+				<stop>Spawned</stop>
+				<value>VVE_VehicleRotorHeavyHelicopter</value>
+			</li>
+			<li>
+				<start>AerialVehicleCrashLanding</start>
+				<stop>Spawned</stop>
+				<value>VVE_VehicleRotorHeavyHelicopter</value>
 			</li>
 		</soundSustainersOnEvent>
 		
-		<race>
-			<baseBodySize>4.5</baseBodySize>
-		</race>
+		<drawProperties>
+			<graphicOverlays>
+				<li>
+					<rotation>0</rotation>
+					<graphicData>
+						<texPath>Things/Vehicles/Gyrtocoptor/GyroBlade</texPath>
+						<graphicClass>Vehicles.Graphic_Propeller</graphicClass>
+						<drawSize>(6, 6)</drawSize>
+						<drawOffsetNorth>(-0.05, 0, 2.2)</drawOffsetNorth>
+						<drawOffsetEast>(1.85, 0, 0.8)</drawOffsetEast>
+						<drawOffsetSouth>(-0.08, 0, -0.6)</drawOffsetSouth>
+						<drawOffsetWest>(-1.85, 0, -0.2)</drawOffsetWest>
+						<layer>4</layer>
+						<shaderType>Cutout</shaderType>
+					</graphicData>
+				</li>
+			</graphicOverlays>
+		</drawProperties>
 		
 		<properties>
-			<customRoadCosts AssignDefaults="0.4"/>
-			
 			<vehicleJobLimitations>
-				<li>(RepairVehicle, 3)</li>
+				<li>(RepairVehicle, 2)</li>
 			</vehicleJobLimitations>
-
-			<manhunterTargetsVehicle>true</manhunterTargetsVehicle>
 			
 			<roles>
 				<li>
-					<key>driver</key>
-					<label>Driver</label>
-					<slots>1</slots>
+					<key>pilot</key>
+					<label>Pilot</label>
+					<slots>2</slots>
 					<slotsToOperate>1</slotsToOperate>
 					
 					<handlingTypes>
 						<li>Movement</li>
 					</handlingTypes>
-				</li>
-				<li>
-					<key>gunner</key>
-					<label>Gunner</label>
-					<slots>1</slots>
-					<slotsToOperate>1</slotsToOperate>
 					
-					<handlingTypes>Turret</handlingTypes>
-					
-					<turretIds>
-						<li>mainTurret</li>
-					</turretIds>
+					<hitbox>
+						<cells>
+							<li>(-1, 3)</li>
+						</cells>
+					</hitbox>
 				</li>
 				<li>
 					<key>passenger</key>
 					<label>Passenger</label>
 					<slots>2</slots>
+					
+					<hitbox>
+						<cells>
+							<li>(0, 3)</li>
+							<li>(1, 3)</li>
+							<li>(-1, 2)</li>
+							<li>(0, 2)</li>
+							<li>(1, 2)</li>
+						</cells>
+					</hitbox>
 				</li>
 			</roles>
 		</properties>
 		
 		<components>
 			<li>
-				<key>Boiler</key>
-				<label>Boiler</label>
-				<health>250</health>
+				<key>LeftLandingSkid</key>
+				<label>Left Landing Skid</label>
+				<health>80</health>
+				<depth>External</depth>
+				
+				<hitbox>
+					<cells>
+						<li>(-1, 3)</li>
+						<li>(-1, 2)</li>
+						<li>(-1, 1)</li>
+						<li>(-1, 0)</li>
+					</cells>
+				</hitbox>
+				
+				<categories>
+					<li>FlightSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>RightLandingSkid</key>
+				<label>Right Landing Skid</label>
+				<health>80</health>
+				<depth>External</depth>
+				
+				<hitbox>
+					<cells>
+						<li>(1, 3)</li>
+						<li>(1, 2)</li>
+						<li>(1, 1)</li>
+						<li>(1, 0)</li>
+					</cells>
+				</hitbox>
+				
+				<categories>
+					<li>FlightSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>LeftHorizontalStabilizer</key>
+				<label>Left Horizontal Stabilizer</label>
+				<health>50</health>
+				<depth>External</depth>
+				
+				<hitbox>
+					<cells>
+						<li>(-1, -3)</li>
+					</cells>
+				</hitbox>
+				
+				<categories>
+					<li>FlightSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>RightHorizontalStabilizer</key>
+				<label>Right Horizontal Stabilizer</label>
+				<health>50</health>
+				<depth>External</depth>
+				
+				<hitbox>
+					<cells>
+						<li>(1, -3)</li>
+					</cells>
+				</hitbox>
+				
+				<categories>
+					<li>FlightSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>SteamEngine</key>
+				<label>Steam Engine</label>
+				<health>120</health>
 				<priorityStatEfficiency>true</priorityStatEfficiency>
 				<depth>Internal</depth>
 				
 				<reactors>
-					<li Class="Vehicles.Reactor_Explosive">
+					<li Class = "Vehicles.Reactor_Explosive">
 						<indicator>VF_Explosive</indicator>
-						<chance>0.15</chance>
+						<chance>0.25</chance>
+						<maxHealth>0.2</maxHealth>
 						<radius>3</radius>
-						<damageDef>Bomb</damageDef>
+						<damageDef>Flame</damageDef>
 					</li>
 				</reactors>
 				
 				<hitbox>
 					<cells>
-						<li>(0, -1)</li>
-						<li>(0, -2)</li>
+						<li>(-1, 0)</li>
+						<li>(0, 0)</li>
+						<li>(1, 0)</li>
 					</cells>
 				</hitbox>
 				
 				<categories>
-					<li>MoveSpeed</li>
+					<li>FlightSpeed</li>
 				</categories>
 			</li>
 			<li>
-				<key>FrontLeftWheel</key>
-				<label>Front Left Wheel</label>
-				<health>80</health>
-				<depth>External</depth>
-				
-				<tags>
-					<li>Wheel</li>
-				</tags>
-				
-				<hitbox>
-					<fallthrough>false</fallthrough>
-					<cells>
-						<li>(-1, 2)</li>
-					</cells>
-				</hitbox>
-				
-				<categories>
-					<li>MoveSpeed</li>
-				</categories>
-			</li>
-			<li>
-				<key>FrontRightWheel</key>
-				<label>Front Right Wheel</label>
-				<health>80</health>
-				<depth>External</depth>
-				
-				<tags>
-					<li>Wheel</li>
-				</tags>
-				
-				<hitbox>
-					<fallthrough>false</fallthrough>
-					<cells>
-						<li>(1, 1)</li>
-					</cells>
-				</hitbox>
-				
-				<categories>
-					<li>MoveSpeed</li>
-				</categories>
-			</li>
-			<li>
-				<key>BackLeftWheel</key>
-				<label>Back Left Wheel</label>
-				<health>80</health>
-				<depth>External</depth>
-				
-				<tags>
-					<li>Wheel</li>
-				</tags>
-				
-				<hitbox>
-					<fallthrough>false</fallthrough>
-					<cells>
-						<li>(-1, -2)</li>
-					</cells>
-				</hitbox>
-				
-				<categories>
-					<li>MoveSpeed</li>
-				</categories>
-			</li>
-			<li>
-				<key>BackRightWheel</key>
-				<label>Back Right Wheel</label>
-				<health>80</health>
-				<depth>External</depth>
-				
-				<tags>
-					<li>Wheel</li>
-				</tags>
-				
-				<hitbox>
-					<fallthrough>false</fallthrough>
-					<cells>
-						<li>(1, -2)</li>
-					</cells>
-				</hitbox>
-				
-				<categories>
-					<li>MoveSpeed</li>
-				</categories>
-			</li>
-			<li>
-				<key>SteamPipes</key>
-				<label>Steam Pipes</label>
-				<health>75</health>
-				<depth>Internal</depth>
-				
-				<hitbox>
-					<cells>
-						<li>(0, 1)</li>
-					</cells>
-				</hitbox>
-				
-				<categories>
-					<li>MoveSpeed</li>
-				</categories>
-			</li>
-			<li>
-				<key>FrontArmorPlating</key>
-				<label>Front Armor Plating</label>
-				<health>600</health>
-				<depth>External</depth>
-				
-				<armor>
-					<ArmorRating_Blunt>0.25</ArmorRating_Blunt>
-					<ArmorRating_Sharp>0.65</ArmorRating_Sharp>
-				</armor>
-				
-				<hitbox>
-					<side>Front</side>
-				</hitbox>
-			</li>
-			<li>
-				<key>LeftArmorPlating</key>
-				<label>Left Armor Plating</label>
-				<health>450</health>
-				<depth>External</depth>
-				
-				<armor>
-					<ArmorRating_Blunt>0.25</ArmorRating_Blunt>
-					<ArmorRating_Sharp>0.65</ArmorRating_Sharp>
-				</armor>
-				
-				<hitbox>
-					<side>Left</side>
-				</hitbox>
-			</li>
-			<li>
-				<key>RightArmorPlating</key>
-				<label>Right Armor Plating</label>
-				<health>450</health>
-				<depth>External</depth>
-				
-				<armor>
-					<ArmorRating_Blunt>0.25</ArmorRating_Blunt>
-					<ArmorRating_Sharp>0.65</ArmorRating_Sharp>
-				</armor>
-				
-				<hitbox>
-					<side>Right</side>
-				</hitbox>
-			</li>
-			<li>
-				<key>BackArmorPlating</key>
-				<label>Rear Armor Plating</label>
-				<health>250</health>
-				<depth>External</depth>
-				
-				<armor>
-					<ArmorRating_Blunt>0.25</ArmorRating_Blunt>
-					<ArmorRating_Sharp>0.65</ArmorRating_Sharp>
-				</armor>
-				
-				<hitbox>
-					<side>Back</side>
-				</hitbox>
-			</li>
-			<li>
-				<key>Steamchamber</key>
-				<label>Steamchamber</label>
-				<health>200</health>
+				<key>SteamChamber</key>
+				<label>Steam Chamber</label>
+				<health>100</health>
 				<depth>Internal</depth>
 				
 				<reactors>
-					<li Class="Vehicles.Reactor_FuelLeak"/>
+					<li Class = "Vehicles.Reactor_Explosive">
+						<indicator>VF_Explosive</indicator>
+						<chance>0.25</chance>
+						<maxHealth>0.2</maxHealth>
+						<radius>3</radius>
+						<damageDef>Flame</damageDef>
+					</li>
 				</reactors>
 				
 				<hitbox>
 					<cells>
-						<li>(0, -1)</li>
+						<li>(-1, 0)</li>
+						<li>(0, 0)</li>
+						<li>(1, 0)</li>
+					</cells>
+				</hitbox>
+				
+				<categories>
+					<li>FlightSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>Transmission</key>
+				<label>Transmission</label>
+				<health>50</health>
+				<depth>Internal</depth>
+				
+				<hitbox>
+					<cells>
+						<li>(-1, 0)</li>
+						<li>(0, 0)</li>
+						<li>(1, 0)</li>
+					</cells>
+				</hitbox>
+				
+				<categories>
+					<li>FlightSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>Rudder</key>
+				<label>Rudder</label>
+				<health>80</health>
+				<depth>External</depth>
+				
+				<hitbox>
+					<cells>
+						<li>(-1, -3)</li>
+						<li>(0, -3)</li>
+						<li>(1, -3)</li>
+					</cells>
+				</hitbox>
+				
+				<categories>
+					<li>FlightSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>LeftSidePanel</key>
+				<label>Left Side Panel</label>
+				<health>120</health>
+				<depth>External</depth>
+				
+				<hitbox>
+					<cells>
+						<li>(-1, 3)</li>
+						<li>(-1, 2)</li>
+						<li>(-1, 1)</li>
+						<li>(-1, 0)</li>
+						<li>(-1, -1)</li>
 					</cells>
 				</hitbox>
 			</li>
 			<li>
-				<key>SteeringApparatus</key>
-				<label>Steering Apparatus</label>
-				<health>100</health>
-				<depth>Internal</depth>
-				<hitWeight>5</hitWeight>
-			</li>
-			<li>
-				<key>Piston</key>
-				<label>Piston</label>
-				<health>150</health>
-				<depth>Internal</depth>
-			</li>
-			<li>
-				<key>Roof</key>
-				<label>Roof</label>
-				<health>250</health>
+				<key>RightSidePanel</key>
+				<label>Right Side Panel</label>
+				<health>120</health>
 				<depth>External</depth>
-				<hitWeight>10</hitWeight>
 				
-				<armor>
-					<ArmorRating_Blunt>0.60</ArmorRating_Blunt>
-					<ArmorRating_Sharp>0.65</ArmorRating_Sharp>
-				</armor>
+				<hitbox>
+					<cells>
+						<li>(1, 3)</li>
+						<li>(1, 2)</li>
+						<li>(1, 1)</li>
+						<li>(1, 0)</li>
+						<li>(1, -1)</li>
+					</cells>
+				</hitbox>
+			</li>
+			<li>
+				<key>FuelStorage</key>
+				<label>Fuel Storage</label>
+				<health>80</health>
+				<depth>Internal</depth>
+				
+				<reactors>
+					<li Class = "Vehicles.Reactor_FuelLeak"/>
+					<li Class = "Vehicles.Reactor_Explosive">
+						<indicator>VF_Explosive</indicator>
+						<chance>0.05</chance>
+						<maxHealth>0.2</maxHealth>
+						<radius>3</radius>
+						<damageDef>Flame</damageDef>
+					</li>
+				</reactors>
+				
+				<hitbox>
+					<cells>
+						<li>(-1, 1)</li>
+						<li>(0, 1)</li>
+						<li>(1, 1)</li>
+					</cells>
+				</hitbox>
+			</li>
+			<li>
+				<key>RotorMast</key>
+				<label>Rotor Mast</label>
+				<health>100</health>
+				<depth>External</depth>
+				
+				<categories>
+					<li>FlightSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>Seat</key>
+				<label>Seat</label>
+				<health>50</health>
+				<depth>Internal</depth>
+				<hitWeight>2</hitWeight>
+			</li>
+			<li>
+				<key>Controls</key>
+				<label>Controls</label>
+				<health>70</health>
+				<depth>Internal</depth>
+				<hitWeight>2</hitWeight>
+			</li>
+			<li>
+				<key>Gearbox</key>
+				<label>Gearbox</label>
+				<health>80</health>
+				<depth>Internal</depth>
+			</li>
+			<li>
+				<key>Servos</key>
+				<label>Servos</label>
+				<health>70</health>
+				<depth>Internal</depth>
+				<hitWeight>2</hitWeight>
 			</li>
 		</components>
-
+		
 		<comps>
 			<li Class="Vehicles.CompProperties_FueledTravel">
-				<fuelType>WoodLog</fuelType>
-				<leakDef>Filth_Water</leakDef>
-				<fuelConsumptionRate>20</fuelConsumptionRate>
-				<fuelCapacity>100</fuelCapacity>
+				<!-- TODO --> <fuelType>Chemfuel</fuelType> <!-- Must Include -->
+				<leakDef>Filth_Fuel</leakDef>
+				<fuelConsumptionRate>48.5</fuelConsumptionRate>
+				<fuelCapacity>360</fuelCapacity>
+				<fuelConsumptionWorldMultiplier>0.5</fuelConsumptionWorldMultiplier>
 			</li>
+			
+
 			<li Class="Vehicles.CompProperties_VehicleTurrets">
 				<turrets>
 					<li>
@@ -421,7 +452,7 @@
 						<key>hullTurret</key>
 					</li>
 					<li>
-						<turretDef>RH_TET_SteamTank_TurretSteam</turretDef>
+						<turretDef>RH_TET_Gyrocoptor_TurretSteam</turretDef>
 						
 						<renderProperties>
 							<north>(0, 0.8)</north>
@@ -434,114 +465,464 @@
 						<angleRestricted/>
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
-						<key>steamTurret</key>
+						<key>SteamTurret</key>
 					</li>
 				</turrets>
+			</li>			
+			
+			<li Class="Vehicles.CompProperties_VehicleLauncher">
+				<launchProtocol Class="Vehicles.PropellerTakeoff">
+					<launchProperties Class = "Vehicles.PropellerProtocolProperties">
+						<maxTicks>800</maxTicks>
+						<maxTicksVertical>600</maxTicksVertical>
+						<maxTicksPropeller>1200</maxTicksPropeller>
+						<forcedRotation>East</forcedRotation>
+						
+						<lockShadowZ>true</lockShadowZ>
+						
+						<rotationCurve Class="SmashTools.BezierCurve">
+							<points>
+								<li>(0, 0)</li>
+								<li>(0.34, 0.07)</li>
+								<li>(0.31, 3.91)</li>
+								<li>(0.5, 6.22)</li>
+								<li>(0.72, 5.36)</li>
+								<li>(0.88, 6.54)</li>
+								<li>(1, 6.5)</li>
+							</points>
+						</rotationCurve>
+						
+						<rotationVerticalCurve Class="SmashTools.BezierCurve">
+							<points>
+								<li>(0, 0)</li>
+								<li>(0.2, 2)</li>
+								<li>(0.4, 6)</li>
+								<li>(0.6, -8)</li>
+								<li>(0.8, 3.3)</li>
+								<li>(1, 4)</li>
+							</points>
+						</rotationVerticalCurve>
+						
+						<angularVelocityPropeller Class="SmashTools.BezierCurve">
+							<points>
+								<li>0, 0</li>
+								<li>0.5, 0</li>
+								<li>1, 59</li>
+							</points>
+						</angularVelocityPropeller>
+						
+						<xPositionCurve Class="SmashTools.BezierCurve">
+							<points>
+								<li>(0, 0)</li>
+								<li>(0.2, 1.33)</li>
+								<li>(0.4, 1)</li>
+								<li>(0.62, 28.18)</li>
+								<li>(0.85, 42.12)</li>
+								<li>(1, 140)</li>
+							</points>
+						</xPositionCurve>
+						
+						<xPositionVerticalCurve Class="SmashTools.BezierCurve">
+							<points>
+								<li>0, 0</li>
+								<li>0.2, 0</li>
+								<li>0.4, 0</li>
+								<li>0.6, 0</li>
+								<li>0.8, 0</li>
+								<li>1, 1</li>
+							</points>
+						</xPositionVerticalCurve>
+						
+						<zPositionCurve Class="SmashTools.BezierCurve">
+							<points>
+								<li>(0, 0)</li>
+								<li>(0, 1.3)</li>
+								<li>(0.15, 1.14)</li>
+								<li>(0.31, 2.17)</li>
+								<li>(0.54, 1.47)</li>
+								<li>(0.7, 5.08)</li>
+								<li>(0.93, 5.12)</li>
+								<li>(1, 7.5)</li>
+							</points>
+						</zPositionCurve>
+						
+						<zPositionVerticalCurve Class="SmashTools.BezierCurve">
+							<points>
+								<li>(0, 0)</li>
+								<li>(0.15, 0)</li>
+								<li>(0.85, 12.3)</li>
+								<li>(1, 15)</li>
+							</points>
+						</zPositionVerticalCurve>
+						
+						<shadowAlphaPropellerCurve Class="SmashTools.BezierCurve">
+							<points>
+								<li>(0, 0)</li>
+								<li>(0.15, 0)</li>
+								<li>(0.2, 0)</li>
+								<li>(0.3, 1)</li>
+							</points>
+						</shadowAlphaPropellerCurve>
+						
+						<fleckDataVertical>
+							<def>DustPuff</def>
+							<angle>0~360</angle>
+							<runOutOfStep>false</runOutOfStep>
+							<lockFleckX>false</lockFleckX>
+							
+							<airTime>
+								<points>
+									<li>(1, 1)</li>
+								</points>
+							</airTime>
+							
+							<drawOffset Class="SmashTools.BezierCurve">
+								<points>
+									<li>(0, 4)</li>
+									<li>(0.25, 4)</li>
+									<li>(0.5, 4)</li>
+									<li>(0.75, 6)</li>
+									<li>(0.75, 8)</li>
+								</points>
+							</drawOffset>
+							
+							<xFleckPositionCurve Class="SmashTools.BezierCurve">
+								<points>
+									<li>(0, 1.5)</li>
+								</points>
+							</xFleckPositionCurve>
+							
+							<frequency Class="SmashTools.BezierCurve">
+								<points>
+									<li>(0, 160)</li>
+									<li>(0.25, 160)</li>
+									<li>(0.5, 160)</li>
+									<li>(0.75, 130)</li>
+									<li>(0.75, 0)</li>
+								</points>
+							</frequency>
+							
+							<rotationRate>
+								<points>
+									<li>(0, 3)</li>
+									<li>(1, 1)</li>
+								</points>
+							</rotationRate>
+							
+							<size Class="SmashTools.BezierCurve">
+								<points>
+									<li>(0, 2.5)</li>
+									<li>(0.25, 1.64)</li>
+									<li>(0.75, 1.56)</li>
+									<li>(1, 1)</li>
+								</points>
+							</size>
+							
+							<speed>
+								<points>
+									<li>(0, 6)</li>
+									<li>(1, 3)</li>
+								</points>
+							</speed>
+						</fleckDataVertical>
+						
+						<fleckDataPropeller>
+							<def>DustPuff</def>
+							<angle>0~360</angle>
+							<runOutOfStep>false</runOutOfStep>
+							<lockFleckX>false</lockFleckX>
+							
+							<airTime>
+								<points>
+									<li>(0, 0.5)</li>
+									<li>(0.5, 1)</li>
+								</points>
+							</airTime>
+							
+							<drawOffset Class="SmashTools.BezierCurve">
+								<points>
+									<li>(0, 3)</li>
+									<li>(0.25, 3)</li>
+									<li>(0.5, 3)</li>
+									<li>(0.75, 4)</li>
+									<li>(1, 4)</li>
+								</points>
+							</drawOffset>
+							
+							<xFleckPositionCurve Class="SmashTools.BezierCurve">
+								<points>
+									<li>(0, 1.5)</li>
+								</points>
+							</xFleckPositionCurve>
+							
+							<frequency Class="SmashTools.BezierCurve">
+								<points>
+									<li>(0.2, 0)</li>
+									<li>(0.25, 20)</li>
+									<li>(0.75, 40)</li>
+									<li>(1, 160)</li>
+								</points>
+							</frequency>
+							
+							<rotationRate>
+								<points>
+									<li>(0, 1)</li>
+									<li>(1, 3)</li>
+								</points>
+							</rotationRate>
+							
+							<size Class="SmashTools.BezierCurve">
+								<points>
+									<li>(0, 1)</li>
+									<li>(0.25, 1.56)</li>
+									<li>(0.75, 1.64)</li>
+									<li>(1, 2.5)</li>
+								</points>
+							</size>
+							
+							<speed>
+								<points>
+									<li>(0, 3)</li>
+									<li>(1, 6)</li>
+								</points>
+							</speed>
+						</fleckDataPropeller>
+					</launchProperties>
+					
+					<landingProperties Class = "Vehicles.PropellerProtocolProperties">
+						<maxTicks>600</maxTicks>
+						<maxTicksVertical>1400</maxTicksVertical>
+						<maxTicksPropeller>900</maxTicksPropeller>
+						<forcedRotation>East</forcedRotation>
+						
+						<lockShadowZ>true</lockShadowZ>
+						
+						<angularVelocityPropeller Class="SmashTools.BezierCurve">
+							<points>
+								<li>(0, 59)</li>
+								<li>(0.5, 0)</li>
+								<li>(1, 0)</li>
+							</points>
+						</angularVelocityPropeller>
+						
+						<rotationCurve Class="SmashTools.BezierCurve">
+							<points>
+								<li>(0, 10)</li>
+								<li>(0.2, 10)</li>
+								<li>(0.4, 10)</li>
+								<li>(0.68, 10)</li>
+								<li>(0.78, 6.74)</li>
+								<li>(0.69, 1.19)</li>
+								<li>(0.79, -2)</li>
+								<li>(1, -2)</li>
+							</points>
+						</rotationCurve>
+						
+						<rotationVerticalCurve Class="SmashTools.BezierCurve">
+							<points>
+								<li>(0, 0)</li>
+								<li>(0.22, 4.57)</li>
+								<li>(0.44, 5.18)</li>
+								<li>(0.69, 3.37)</li>
+								<li>(0.79, 5.55)</li>
+								<li>(1, 2)</li>
+							</points>
+						</rotationVerticalCurve>
+						
+						<xPositionCurve Class="SmashTools.BezierCurve">
+							<points>
+								<li>(0, -150)</li>
+								<li>(0.32, -120.12)</li>
+								<li>(0.49, -91.06)</li>
+								<li>(0.64, -66)</li>
+								<li>(0.73, -41.07)</li>
+								<li>(0.87, -29.64)</li>
+								<li>(1, -20)</li>
+							</points>
+						</xPositionCurve>
+						
+						<xPositionVerticalCurve Class="SmashTools.BezierCurve">
+							<points>
+								<li>(0, -20)</li>
+								<li>(0.17, 6.65)</li>
+								<li>(0.3, 15)</li>
+								<li>(0.5, 20)</li>
+								<li>(0.75, 20)</li>
+								<li>(1, 20)</li>
+							</points>
+						</xPositionVerticalCurve>
+						
+						<zPositionCurve Class="SmashTools.BezierCurve">
+							<points>
+								<li>(0, 5)</li>
+								<li>(0.25, 0.94)</li>
+								<li>(0.47, 0.46)</li>
+								<li>(0.74, 1.76)</li>
+								<li>(0.8, 0.58)</li>
+								<li>(1, 2.11)</li>
+							</points>
+						</zPositionCurve>
+						
+						<zPositionVerticalCurve Class="SmashTools.BezierCurve">
+							<points>
+								<li>(0, 15)</li>
+								<li>(0.15, 18.09)</li>
+								<li>(0.5, 14)</li>
+								<li>(0.75, 0)</li>
+								<li>(1, -2.11)</li>
+							</points>
+						</zPositionVerticalCurve>
+						
+						<shadowAlphaPropellerCurve Class="SmashTools.BezierCurve">
+							<points>
+								<li>(0.7, 1)</li>
+								<li>(0.85, 1)</li>
+								<li>(0.9, 1)</li>
+								<li>(1, 0)</li>
+							</points>
+						</shadowAlphaPropellerCurve>
+						
+						<fleckDataVertical>
+							<def>DustPuff</def>
+							<angle>0~360</angle>
+							<runOutOfStep>false</runOutOfStep>
+							<lockFleckX>false</lockFleckX>
+							
+							<airTime>
+								<points>
+									<li>(1, 1)</li>
+								</points>
+							</airTime>
+							
+							<drawOffset Class="SmashTools.BezierCurve">
+								<points>
+									<li>(0, 8)</li>
+									<li>(0.25, 6)</li>
+									<li>(0.5, 4)</li>
+									<li>(0.75, 4)</li>
+									<li>(0.75, 4)</li>
+								</points>
+							</drawOffset>
+							
+							<xFleckPositionCurve Class="SmashTools.BezierCurve">
+								<points>
+									<li>(0, 1.5)</li>
+								</points>
+							</xFleckPositionCurve>
+							
+							<frequency Class="SmashTools.BezierCurve">
+								<points>
+									<li>(0.65, 0)</li>
+									<li>(0.65, 130)</li>
+									<li>(0.75, 160)</li>
+									<li>(0.75, 160)</li>
+									<li>(1, 160)</li>
+								</points>
+							</frequency>
+							
+							<rotationRate>
+								<points>
+									<li>(0, 3)</li>
+									<li>(1, 1)</li>
+								</points>
+							</rotationRate>
+							
+							<size Class="SmashTools.BezierCurve">
+								<points>
+									<li>(0, 1)</li>
+									<li>(0.25, 1.56)</li>
+									<li>(0.75, 1.64)</li>
+									<li>(1, 2.5)</li>
+								</points>
+							</size>
+							
+							<speed>
+								<points>
+									<li>(0, 3)</li>
+									<li>(1, 6)</li>
+								</points>
+							</speed>
+						</fleckDataVertical>
+						
+						<fleckDataPropeller>
+							<def>DustPuff</def>
+							<angle>0~360</angle>
+							<runOutOfStep>false</runOutOfStep>
+							<lockFleckX>false</lockFleckX>
+							
+							<airTime>
+								<points>
+									<li>(0, 1)</li>
+									<li>(0.5, 0.5)</li>
+								</points>
+							</airTime>
+							
+							<drawOffset Class="SmashTools.BezierCurve">
+								<points>
+									<li>(0, 4)</li>
+									<li>(0.25, 4)</li>
+									<li>(0.5, 4)</li>
+									<li>(0.75, 3)</li>
+									<li>(1, 3)</li>
+								</points>
+							</drawOffset>
+							
+							<xFleckPositionCurve Class="SmashTools.BezierCurve">
+								<points>
+									<li>(0, 1.5)</li>
+								</points>
+							</xFleckPositionCurve>
+		
+							<frequency Class="SmashTools.BezierCurve">
+								<points>
+									<li>(0, 160)</li>
+									<li>(0.05, 40)</li>
+									<li>(0.55, 20)</li>
+									<li>(0.8, 0)</li>
+								</points>
+							</frequency>
+							
+							<rotationRate>
+								<points>
+									<li>(0, 3)</li>
+									<li>(1, 1)</li>
+								</points>
+							</rotationRate>
+							
+							<size Class="SmashTools.BezierCurve">
+								<points>
+									<li>(0, 2.5)</li>
+									<li>(0.25, 1.64)</li>
+									<li>(0.75, 1.56)</li>
+									<li>(1, 1)</li>
+								</points>
+							</size>
+							
+							<speed>
+								<points>
+									<li>(0, 6)</li>
+									<li>(1, 3)</li>
+								</points>
+							</speed>
+						</fleckDataPropeller>
+					</landingProperties>
+				</launchProtocol>
 			</li>
 		</comps>
-	</Vehicles.VehicleDef>
+	</Vehicles.VehicleDef>	
 	
-	<ThingDef ParentName="BaseBullet">
-		<defName>RH_TET_SteamTank_HullTurretBullet</defName>
-		<label>steam tank shell</label>
-		
-		<thingClass>Projectile_Explosive</thingClass>
-		
-		<graphicData>
-			<texPath>Things/Projectile/Proj_CannonBall/RH_TET_Empire_CannonBall</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>1.0</drawSize>
-		</graphicData>
-		
-		<projectile>
-			<damageDef>Bomb</damageDef>
-			<damageAmountBase>85</damageAmountBase>
-			<speed>120</speed>
-			<explosionRadius>2.5</explosionRadius>
-			<explosionDamageFalloff>false</explosionDamageFalloff>
-			<armorPenetrationBase>3.0</armorPenetrationBase>
-			<soundExplode>MortarIncendiary_Explode</soundExplode>
-			<soundAmbient>MortarRound_Ambient</soundAmbient>
-			<ai_IsIncendiary>true</ai_IsIncendiary>
-		</projectile>
-
-	</ThingDef>
 	
-	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
-		<defName>RH_TET_SteamTank_HullCannon</defName>
-		<label>steam tank cannon</label>
-		<description>A large cannon mounted on steam tanks, capable of blasting cannon ball at high speed using steam power.</description>
-		
-		<turretType>Rotatable</turretType>
-		<shotSound>RH_TET_Shot_SteamTankCannonSound</shotSound>
-		<reloadSound>RH_TET_Shot_SteamTankReloadSound</reloadSound>
-		
-		<projectile>RH_TET_SteamTank_HullTurretBullet</projectile>
-		<reloadTimer>4.4</reloadTimer>
-		<warmUpTimer>3.4</warmUpTimer>
-		<magazineCapacity>1</magazineCapacity>
-		<chargePerAmmoCount>5</chargePerAmmoCount>
-		<genericAmmo>true</genericAmmo>
-
-		<autoSnapTargeting>false</autoSnapTargeting>
-		<rotationSpeed>.6</rotationSpeed>
-		
-		<projectileOffset>5.25</projectileOffset>
-		<hitFlags>IntendedTarget</hitFlags>
-		<maxRange>100</maxRange>
-		<minRange>3</minRange>
-		
-		<attachProjectileFlag>Tank</attachProjectileFlag>
-		
-		<recoil>
-			<distanceTotal>0.3</distanceTotal>
-			<distancePerTick>0.2</distancePerTick>
-			<speedMultiplierPostRecoil>0.35</speedMultiplierPostRecoil>
-		</recoil>
-		
-		<vehicleRecoil>
-			<distanceTotal>0.1</distanceTotal>
-			<distancePerTick>0.05</distancePerTick>
-			<speedMultiplierPostRecoil>0.55</speedMultiplierPostRecoil>
-		</vehicleRecoil>
-		
-		<fireModes>
-			<li>
-				<shotsPerBurst>1</shotsPerBurst>
-				<ticksBetweenBursts>1</ticksBetweenBursts>
-				<spreadRadius>1</spreadRadius>
-				<label>Single</label>
-				<texPath>UI/Gizmos/FireRate_Single</texPath>
-			</li>
-		</fireModes>
-		
-		<graphicData>
-			<texPath>Things/Vehicles/GenericTurret/TankTurretBlank</texPath>
-			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
-			<shaderType>CutoutComplex</shaderType>
-			<drawSize>(2, 2)</drawSize>
-		</graphicData>
-		
-		<ammunition>
-			<thingDefs>
-				<li>Steel</li>
-			</thingDefs>
-		</ammunition>
-		
-		<motes>
-			<li>
-				<cycles>1</cycles>
-				<moteDef>Mote_CannonPlume</moteDef>
-				<animationType>Reset</animationType>
-			</li>
-		</motes>
-	</Vehicles.VehicleTurretDef>
+	
+	
+	
+	
+	
 	
 	<VFECore.ExpandableProjectileDef ParentName="BaseBullet">
 	
-		<defName>RH_TET_SteamTank_TurretSteamBullet</defName>
+		<defName>RH_TET_Gyrocoptor_TurretSteamBullet</defName>
 		<label>steam</label>
-		<thingClass>RimhammerSteamTanks.SteamBlastProjectile</thingClass>
+		<thingClass>RimhammerGyros.SteamBlastProjectile</thingClass>
 		
 		<graphicData>
 			<texPath>Things/Projectile/Proj_SteamGun</texPath>
@@ -569,15 +950,15 @@
 	</VFECore.ExpandableProjectileDef>
 	
 	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
-		<defName>RH_TET_SteamTank_TurretSteam</defName>
-		<label>steam tank steam cannon</label>
-		<description>A turret mounted steam cannon, capable of blasting very hot steam at nearby foes in a broad swath. Causes severe burns, scalds, and extreme pain. Great for incapacitating multiple grouped foes.</description>
+		<defName>RH_TET_Gyrocoptor_TurretSteam</defName>
+		<label>gyro steam cannon</label>
+		<description>A vehicle mounted steam cannon, capable of blasting very hot steam at nearby foes in a broad swath. Causes severe burns, scalds, and extreme pain. Great for incapacitating multiple grouped foes.</description>
 		
 		<turretType>Rotatable</turretType>
-		<shotSound>RH_TET_Shot_SteamTankSteamCannonSound</shotSound>
-		<reloadSound>RH_TET_Shot_SteamTankReloadSound</reloadSound>
+		<shotSound>RH_TET_Shot_GyroSteamCannonSound</shotSound>
+		<reloadSound>RH_TET_Shot_GyroReloadSound</reloadSound>
 		
-		<projectile>RH_TET_SteamTank_TurretSteamBullet</projectile>
+		<projectile>RH_TET_Gyrocoptor_TurretSteamBullet</projectile>
 		<reloadTimer>4.4</reloadTimer>
 		<warmUpTimer>3.4</warmUpTimer>
 		<magazineCapacity>1</magazineCapacity>
@@ -617,15 +998,15 @@
 		</fireModes>
 		
 		<graphicData>
-			<texPath>Things/Vehicles/t1/Conqueror/Conqeuror_Tank_CannonTop_a</texPath>
+			<texPath>Things/Vehicles/GenericTurret/GyroTurretBlank</texPath>
 			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
-			<drawSize>(3.9, 3.9)</drawSize>
+			<drawSize>(.5, .5)</drawSize>
 		</graphicData>
 		
 		<ammunition>
 			<thingDefs>
-				<li>WoodLog</li>
+				<!--TODO --><li>RH_TET_Coal</li>
 			</thingDefs>
 		</ammunition>
 		

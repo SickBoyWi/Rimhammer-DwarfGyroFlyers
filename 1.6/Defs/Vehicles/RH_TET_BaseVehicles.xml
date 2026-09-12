@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
+<!-- TODO
+
 	<Vehicles.VehicleBuildDef Name="RH_TET_Gyro_BuildDefBase" ParentName="VehicleBaseBuildable" Abstract="True">
 
 		<graphicData>
@@ -25,8 +27,7 @@
 		
 		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
 		
-		<!-- TODO DELETE? <thingToSpawn>Tank</thingToSpawn>-->
 	</Vehicles.VehicleBuildDef>
-
+-->
 
 </Defs>

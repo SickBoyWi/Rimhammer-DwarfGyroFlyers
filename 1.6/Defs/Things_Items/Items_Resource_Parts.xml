@@ -64,7 +64,7 @@
 	</ThingDef>
   
 	<ThingDef ParentName="RH_TET_VehiclePartBase">
-		<defName>RH_TET_Gyro_ArmorPlate</defName>
+		<defName>Gyro_ArmorPlate</defName>
 		<label>armor plate</label>
 		<description>Armor plates used in the creation of Rimhammer vehicles. Valaya (and armor) protects.</description>
 		<graphicData>
@@ -83,7 +83,7 @@
 	</ThingDef>
   
 	<ThingDef ParentName="RH_TET_VehiclePartBase">
-		<defName>RH_TET_Gyro_Boiler</defName>
+		<defName>Gyro_Boiler</defName>
 		<label>boiler</label>
 		<description>A boiler used in the creation of Rimhammer vehicles. One of the main components in creating a steam driven vehicle.</description>
 		<graphicData>
