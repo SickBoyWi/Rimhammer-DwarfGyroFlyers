@@ -7,7 +7,7 @@
 		<description>A dwarfen flying machine that is more armored, and equipped with droppable bombs.</description>
 
 		<graphicData>
-			<texPath>Things/Vehicles/Gyrocoptor/RH_TET_Gyrocopter_south</texPath>
+			<texPath>Things/Vehicles/Gyrobomber/RH_TET_Gyrobomber_north</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
 			<drawSize>(3,5)</drawSize>

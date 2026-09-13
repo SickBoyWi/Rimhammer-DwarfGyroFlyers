@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\BackUp\\Modding\\RimWorld\\Repositories\\Rimhammer-DwarfGyroFlyers\\Source\\RimhammerGyros\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F1E037CA-A4D5-301F-C72A-55A5E1521CAD}|RimhammerGyros.csproj|d:\\backup\\modding\\rimworld\\repositories\\rimhammer-dwarfgyroflyers\\source\\rimhammergyros\\steamblastprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1E037CA-A4D5-301F-C72A-55A5E1521CAD}|RimhammerGyros.csproj|solutionrelative:steamblastprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SteamBlastProjectile.cs",
+              "DocumentMoniker": "D:\\BackUp\\Modding\\RimWorld\\Repositories\\Rimhammer-DwarfGyroFlyers\\Source\\RimhammerGyros\\SteamBlastProjectile.cs",
+              "RelativeDocumentMoniker": "SteamBlastProjectile.cs",
+              "ToolTip": "D:\\BackUp\\Modding\\RimWorld\\Repositories\\Rimhammer-DwarfGyroFlyers\\Source\\RimhammerGyros\\SteamBlastProjectile.cs*",
+              "RelativeToolTip": "SteamBlastProjectile.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-13T11:58:39.151Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -7,7 +7,7 @@
 		<description>A dwarfen flying machine with light armor, and a steam cannon.</description>
 
 		<graphicData>
-			<texPath>Things/Vehicles/Gyrocoptor/RH_TET_Gyrobomber_north</texPath>
+			<texPath>Things/Vehicles/Gyrocoptor/RH_TET_Gyrocopter_south</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
 			<drawSize>(4,6)</drawSize>
@@ -60,7 +60,7 @@
 		<fillPercent>1</fillPercent>
 		
 		<nameable>true</nameable>
-		<buildDef>RH_TET_Gyro_Gyrocoptor</buildDef>
+		<buildDef>RH_TET_Gyro_GyrocoptorBlueprint</buildDef>
 
 		<size>(3, 5)</size>
 		
@@ -90,17 +90,17 @@
 			<li>
 				<start>AerialVehicleLaunch</start>
 				<stop>AerialVehicleLeftMap</stop>
-				<value>VVE_VehicleRotorHeavyHelicopter</value>
+				<value>RH_TET_GyroRotors</value>
 			</li>
 			<li>
 				<start>AerialVehicleLanding</start>
 				<stop>Spawned</stop>
-				<value>VVE_VehicleRotorHeavyHelicopter</value>
+				<value>RH_TET_GyroRotors</value>
 			</li>
 			<li>
 				<start>AerialVehicleCrashLanding</start>
 				<stop>Spawned</stop>
-				<value>VVE_VehicleRotorHeavyHelicopter</value>
+				<value>RH_TET_GyroRotors</value>
 			</li>
 		</soundSustainersOnEvent>
 		
@@ -109,7 +109,7 @@
 				<li>
 					<rotation>0</rotation>
 					<graphicData>
-						<texPath>Things/Vehicles/Gyrtocoptor/GyroBlade</texPath>
+						<texPath>Things/Vehicles/Gyrocoptor/GyroBlade</texPath>
 						<graphicClass>Vehicles.Graphic_Propeller</graphicClass>
 						<drawSize>(6, 6)</drawSize>
 						<drawOffsetNorth>(-0.05, 0, 2.2)</drawOffsetNorth>
@@ -132,7 +132,7 @@
 				<li>
 					<key>pilot</key>
 					<label>Pilot</label>
-					<slots>2</slots>
+					<slots>1</slots>
 					<slotsToOperate>1</slotsToOperate>
 					
 					<handlingTypes>
@@ -918,7 +918,7 @@
 	
 	
 	
-	<VFECore.ExpandableProjectileDef ParentName="BaseBullet">
+	<VEF.Weapons.ExpandableProjectileDef ParentName="BaseBullet">
 	
 		<defName>RH_TET_Gyrocoptor_TurretSteamBullet</defName>
 		<label>steam</label>
@@ -947,7 +947,7 @@
 		<tickDamageRate>20</tickDamageRate>
 		<dealsDamageOnce>true</dealsDamageOnce>
 		<minDistanceToAffect>2</minDistanceToAffect>
-	</VFECore.ExpandableProjectileDef>
+	</VEF.Weapons.ExpandableProjectileDef>
 	
 	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
 		<defName>RH_TET_Gyrocoptor_TurretSteam</defName>
@@ -969,7 +969,6 @@
 		<rotationSpeed>.5</rotationSpeed>
 		
 		<projectileOffset>5.25</projectileOffset>
-		<hitFlags>IntendedTarget</hitFlags>
 		<maxRange>16</maxRange>
 		<minRange>1</minRange>
 		
