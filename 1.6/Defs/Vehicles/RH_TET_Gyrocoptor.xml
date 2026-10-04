@@ -7,7 +7,7 @@
 		<description>A dwarfen flying machine with light armor, and a steam cannon.</description>
 
 		<graphicData>
-			<texPath>Things/Vehicles/Gyrocoptor/RH_TET_Gyrocopter_south</texPath>
+			<texPath>Things/Vehicles/Gyrocoptor/RH_TET_Gyrocopter_north</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
 			<drawSize>(6,7)</drawSize>
@@ -112,10 +112,10 @@
 						<texPath>Things/Vehicles/Gyrocoptor/GyroBlade</texPath>
 						<graphicClass>Vehicles.Graphic_Propeller</graphicClass>
 						<drawSize>(5, 5)</drawSize>
-						<drawOffsetNorth>(0.25, 0, 0)</drawOffsetNorth>
-						<drawOffsetEast>(0, 0, -0.5)</drawOffsetEast>
-						<drawOffsetSouth>(-0.25, 0, 0)</drawOffsetSouth>
-						<drawOffsetWest>(0, 0, -0.5)</drawOffsetWest>
+						<drawOffsetNorth>(0, 0, 1.65)</drawOffsetNorth>
+						<drawOffsetEast>(0.10, 0, 1)</drawOffsetEast>
+						<drawOffsetSouth>(0, 0, .65)</drawOffsetSouth>
+						<drawOffsetWest>(-0.10, 0, 1)</drawOffsetWest>
 						<layer>4</layer>
 						<shaderType>Cutout</shaderType>
 					</graphicData>
