@@ -1,76 +1,44 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
-<!-- TODO : Patch in dwarf stuff as appropriate.
-
-CONSIDER: Patches between this and the Empire Steam Tank mod too. Allow things to be built at both benches. 
-	
-	
-	If Dwarfs mod is present, add research to idols and relics. 
+<!-- TODO : CONSIDER: Patches between this and the Empire Steam Tank mod too. Allow things to be built at both benches. -->
+	<!--If Dwarf mod is present, then update as appropriate.--> 
 	<Operation Class="PatchOperationFindMod">
 		<mods>
 			<li>Rimhammer - The End Times - Dwarfs</li>
 		</mods>
 		<match Class="PatchOperationSequence">
 			<operations>
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/Vehicles.VehicleTurretDef[@Name="RH_TET_FlameTurret"]/ammunition/thingDefs</xpath>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@Name="RH_TET_Gyro_WorkBench"]/researchPrerequisites</xpath>
 					<value>
-						<thingDefs><li>RH_TET_BlackPowder</li></thingDefs>
+						<li>RH_TET_Dwarf_WarmachinesBasic</li>
+						<li>RH_TET_Dwarfs_Lighting_Advanced</li>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>Defs/ThingDef[@Name="RH_TET_SteamTank_WorkBench"]/researchPrerequisites</xpath>
+					<xpath>Defs/ThingDef[@Name="RH_TET_Gyro_VehiclePartBase"]/recipeMaker/researchPrerequisites</xpath>
 					<value>
-						<li>RH_TET_Empire_Warmachines_Basic</li>
-						<li>RH_TET_Empire_Lighting_Advanced</li>
+						<li>RH_TET_Dwarf_WarmachinesBasic</li>
+						<li>RH_TET_Dwarfs_Lighting_Advanced</li>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>Defs/ThingDef[@Name="RH_TET_VehiclePartBase"]/recipeMaker/researchPrerequisites</xpath>
+					<xpath>Defs/Vehicles.VehicleBuildDef[@Name="RH_TET_Gyro_GyrocoptorBlueprint"]/researchPrerequisites</xpath>
 					<value>
-						<li>RH_TET_Empire_Warmachines_Basic</li>
-						<li>RH_TET_Empire_Lighting_Advanced</li>
+						<li>RH_TET_Dwarf_WarmachinesBasic</li>
+						<li>RH_TET_Dwarfs_Lighting_Advanced</li>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>Defs/Vehicles.VehicleBuildDef[@Name="RH_TET_SteamTank_ConquerorBlueprint"]/researchPrerequisites</xpath>
+					<xpath>Defs/Vehicles.VehicleBuildDef[@Name="RH_TET_Gyro_GyrobomberBlueprint"]/researchPrerequisites</xpath>
 					<value>
-						<li>RH_TET_Empire_Warmachines_Basic</li>
-						<li>RH_TET_Empire_Lighting_Advanced</li>
-					</value>
-				</li>
-				<li Class="PatchOperationAdd">
-					<xpath>Defs/Vehicles.VehicleBuildDef[@Name="RH_TET_SteamTank_AlterKameradBlueprint"]/researchPrerequisites</xpath>
-					<value>
-						<li>RH_TET_Empire_Warmachines_Advanced</li>
-						<li>RH_TET_Empire_Lighting_Advanced</li>
-					</value>
-				</li>
-				<li Class="PatchOperationAdd">
-					<xpath>Defs/Vehicles.VehicleBuildDef[@Name="RH_TET_SteamTank_DeliveranceBlueprint"]/researchPrerequisites</xpath>
-					<value>
-						<li>RH_TET_Empire_Warmachines_Basic</li>
-						<li>RH_TET_Empire_Lighting_Advanced</li>
-					</value>
-				</li>
-				<li Class="PatchOperationAdd">
-					<xpath>Defs/Vehicles.VehicleBuildDef[@Name="RH_TET_SteamTank_IndomitableBlueprint"]/researchPrerequisites</xpath>
-					<value>
-						<li>RH_TET_Empire_Warmachines_Basic</li>
-						<li>RH_TET_Empire_Lighting_Advanced</li>
-					</value>
-				</li>
-				<li Class="PatchOperationAdd">
-					<xpath>Defs/Vehicles.VehicleBuildDef[@Name="RH_TET_SteamTank_EmperorBlueprint"]/researchPrerequisites</xpath>
-					<value>
-						<li>RH_TET_Empire_Warmachines_Advanced</li>
-						<li>RH_TET_Empire_Lighting_Advanced</li>
+						<li>RH_TET_Dwarf_WarmachinesAdvanced</li>
+						<li>RH_TET_Dwarfs_Lighting_Advanced</li>
 					</value>
 				</li>
 			</operations>
 		</match>
 	</Operation>
--->
 </Patch>
 

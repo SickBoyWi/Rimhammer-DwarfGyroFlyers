@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<ThingDef ParentName="BenchBase" Name="RH_TET_SteamTank_WorkBench">
+	<ThingDef ParentName="BenchBase" Name="RH_TET_Gyro_WorkBench">
 		<defName>RH_TET_Gyro_WorkBench</defName>
 		<label>engineering bench</label>
 		<description>A dedicated work station for assembling vehicle parts. Where parts of Dwarfen gyro-fliers are created.</description>

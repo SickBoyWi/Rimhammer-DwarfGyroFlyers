@@ -16,7 +16,7 @@
 		<resourceReadoutRoot>true</resourceReadoutRoot>
 	</ThingCategoryDef>
   
-	<ThingDef Name="RH_TET_VehiclePartBase" Abstract="True">
+	<ThingDef Name="RH_TET_Gyro_VehiclePartBase" Abstract="True">
 		<thingClass>ThingWithComps</thingClass>
 		<category>Item</category>
 		<drawerType>MapMeshOnly</drawerType>
@@ -63,7 +63,7 @@
 		</recipeMaker>
 	</ThingDef>
   
-	<ThingDef ParentName="RH_TET_VehiclePartBase">
+	<ThingDef ParentName="RH_TET_Gyro_VehiclePartBase">
 		<defName>Gyro_ArmorPlate</defName>
 		<label>armor plate</label>
 		<description>Armor plates used in the creation of Rimhammer vehicles. Valaya (and armor) protects.</description>
@@ -82,7 +82,7 @@
 		</costList>
 	</ThingDef>
   
-	<ThingDef ParentName="RH_TET_VehiclePartBase">
+	<ThingDef ParentName="RH_TET_Gyro_VehiclePartBase">
 		<defName>Gyro_Boiler</defName>
 		<label>boiler</label>
 		<description>A boiler used in the creation of Rimhammer vehicles. One of the main components in creating a steam driven vehicle.</description>
@@ -102,7 +102,7 @@
 		</costList>
 	</ThingDef>
   
-	<ThingDef ParentName="RH_TET_VehiclePartBase">
+	<ThingDef ParentName="RH_TET_Gyro_VehiclePartBase">
 		<defName>Gyro_Piston</defName>
 		<label>piston</label>
 		<description>A piston used in the creation of Rimhammer vehicles. Once you have steam, you need a way to leverage it; that's what pistons do.</description>
@@ -122,7 +122,7 @@
 		</costList>
 	</ThingDef>
   
-	<ThingDef ParentName="RH_TET_VehiclePartBase">
+	<ThingDef ParentName="RH_TET_Gyro_VehiclePartBase">
 		<defName>Gyro_SteamChamber</defName>
 		<label>steam chamber</label>
 		<description>A steam chamber used in the creation of Rimhammer vehicles. Once you have steam, you need a way to make it work for you; pushing it into steam chambers to be forced through a machine facilitates that.</description>
@@ -143,7 +143,7 @@
 		</costList>
 	</ThingDef>
   
-	<ThingDef ParentName="RH_TET_VehiclePartBase">
+	<ThingDef ParentName="RH_TET_Gyro_VehiclePartBase">
 		<defName>Gyro_SteamPipes</defName>
 		<label>steam pipes</label>
 		<description>Steam pipes used in the creation of Rimhammer vehicles. Once you have steam, you need a way to get it where you need it.</description>
@@ -162,7 +162,7 @@
 		</costList>
 	</ThingDef>
   
-	<ThingDef ParentName="RH_TET_VehiclePartBase">
+	<ThingDef ParentName="RH_TET_Gyro_VehiclePartBase">
 		<defName>Gyro_Blade</defName>
 		<label>blade</label>
 		<description>A blade used in the creation of Rimhammer vehicles. Required for flight and locomotion.</description>

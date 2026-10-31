@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
+	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable"  Name="RH_TET_Gyro_GyrocoptorBlueprint">
 		<defName>RH_TET_Gyro_GyrocoptorBlueprint</defName>
 		<label>Dawi Gyrocoptor</label>
 		<description>A dwarfen flying machine with light armor, and a steam cannon.</description>
@@ -412,8 +412,8 @@
 		
 		<comps>
 			<li Class="Vehicles.CompProperties_FueledTravel">
-				<!-- TODO --> <fuelType>Chemfuel</fuelType> <!-- Must Include -->
-				<leakDef>Filth_Fuel</leakDef>
+				<fuelType>WoodLog</fuelType>
+				<leakDef>Filth_Water</leakDef>
 				<fuelConsumptionRate>48.5</fuelConsumptionRate>
 				<fuelCapacity>360</fuelCapacity>
 				<fuelConsumptionWorldMultiplier>0.5</fuelConsumptionWorldMultiplier>
