@@ -81,7 +81,7 @@
 		<vehicleStats>
 			<Mass>880</Mass>
 			<MoveSpeed LockSetting = "True">0</MoveSpeed>
-			<CargoCapacity>150</CargoCapacity>
+			<CargoCapacity>300</CargoCapacity>
 			<RepairRate>1</RepairRate>
 			<FlightSpeed>8.99</FlightSpeed>
 		</vehicleStats>
@@ -162,7 +162,7 @@
 				<li>
 					<key>passenger</key>
 					<label>Passenger</label>
-					<slots>2</slots>
+					<slots>3</slots>
 					
 					<hitbox>
 						<cells>

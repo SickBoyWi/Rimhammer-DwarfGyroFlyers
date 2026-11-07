@@ -81,7 +81,7 @@
 		<vehicleStats>
 			<Mass>680</Mass>
 			<MoveSpeed LockSetting = "True">0</MoveSpeed>
-			<CargoCapacity>150</CargoCapacity>
+			<CargoCapacity>200</CargoCapacity>
 			<RepairRate>1</RepairRate>
 			<FlightSpeed>9.59</FlightSpeed>
 		</vehicleStats>
